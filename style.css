@@ -1,0 +1,142 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* font-family: 'Montserrat', sans-serif;
+
+font-family: 'Fraunces', serif; */
+
+body {
+    background-color: var(--Cream);
+}
+main {
+    margin: 40px auto;
+    border-radius: 10px;
+    background-color: var(--White);
+    width: 340px;
+}
+main .container {
+    padding: 25px;
+}
+main .image {
+    width: 100%;
+    height: 235px;
+    border-radius: 10px 10px 0 0;
+    background-image: url(/images/image-product-mobile.jpg);
+    background-size: 100%;
+}
+main .image img {
+    display: none;
+}
+
+main p {
+    color: var(--Dark-grayish-blue);
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+    font-size: 0.87rem;
+    margin-bottom: 20px;
+}
+main p span:first-of-type {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+main p span:last-of-type {
+    color: var(--Very-dark-blue);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin: 15px 0;
+    display: block;
+}
+main .price {
+    color: var(--Dark-cyan);
+    font-size: 2rem;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    position: relative;
+}
+main .price::before {
+    content: "$169.99";
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30%;
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: "Times New Roman", Times, serif;
+}
+
+main a {
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    text-align: center;
+    text-transform: capitalize;
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    padding: 15px;
+    margin-top: 15px;
+    text-decoration: none;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+main a i {
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        width: 640px;
+        margin: 200px auto;
+    }
+    main .image {
+        background-image: none;
+        width: fit-content;
+        height: fit-content;
+    }
+    main .image img {
+        width: 300px;
+        display: block;
+        border-radius: 10px 0 0 10px;
+    }
+    .container {
+        margin: 20px 35px;
+        padding: 0 !important;
+    }
+    main p span:last-of-type  {
+        margin-right: 60px !important ;
+        font-size: 2rem !important;
+    }
+    main a {
+        padding: 20px !important;
+        margin-top: 25px !important;
+    }
+}
+
+footer {
+    margin: 250px auto 0;
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+footer p {
+    color: white;
+    font-size: 1rem;
+}
+footer a {
+    text-decoration: none;
+    color: var(--Dark-cyan);
+}
